@@ -135,29 +135,6 @@
       }
     },
     {
-      "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2020-06-01",
-      "name": "[variables('networkSecurityGroupName')]",
-      "location": "[parameters('location')]",
-      "properties": {
-        "securityRules": [
-          {
-            "name": "default-allow-3389",
-            "properties": {
-              "priority": 1000,
-              "access": "Deny",
-              "direction": "Inbound",
-              "destinationPortRange": "3389",
-              "protocol": "Tcp",
-              "sourcePortRange": "*",
-              "sourceAddressPrefix": "192.168.0.0/24",
-              "destinationAddressPrefix": "*"
-            }
-          }
-        ]
-      }
-    },
-    {
       "type": "Microsoft.Network/virtualNetworks",
       "apiVersion": "2020-06-01",
       "name": "[variables('virtualNetworkName')]",
